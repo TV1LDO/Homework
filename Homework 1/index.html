@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Nav work</title>
+</head>
+<body>
+    <!-- ნავიგაციის ველი -->
+    <nav>
+        <!-- ბრენდის სახელი რომელზე დაჭრის შემდეგაც დაბრუნდება Home გვერდზე, რადგან heading ჩასმული არის ლინკში -->
+        <a href="#home#"><h1 class="nav-header">GOA</h1></a>
+        <!-- ნავიგაციის ელემენტები დალაგებული არის unorder list -ით და li ელემენტი ჩასმული არის  a თაგში, რათა დაჭერის შემდეგ გადავიდეს შესაბამის გვერდზე -->
+        <ul class="nav-ul">
+            <a class="nav" href="#home#"><li>Home</li></a>
+            <a class="nav" href="#about#"><li>About</li></a>
+            <a class="nav" href="#services#"><li>Services</li></a>
+            <a class="nav" href="#gallery#"><li>Gallery</li></a>
+            <a class="nav" href="#feedback#"><li>Feedback</li></a>
+        </ul>
+    </nav>
+    <!-- article თაგში მოთავსებულია ძირითადი ინფორმაცია  -->
+    <article>
+        <!-- main კონტეინერში მოთავსებული ინფორმაცია გვეუბნება რას შევისწავლით აკადემიაში :) -->
+        <main class="langs">
+            <!-- heading და ლისტი ერთმანეთისგან გამოყოფილი არის ჰორიზონტალური ხაზით(hr თაგით) -->
+            <h1 class="langs-header">შეისწავლით:</h1>
+            <hr>
+            <ul class="lang-ul">
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>AI</li>
+            </ul>
+        </main>
+        <!-- aside კონტეინერში არის ღილაკი, რომლის გააქტიურების შემთხვევაში უნდა გამოჩნდეს რეგისტრაციის ფორმა -->
+        <aside>
+            <h1 class="aside-header">დაიწყე სწავლა ახლავე!</h1>
+            <button>დაწყება</button>
+        </aside>
+    </article>
+</body>
+</html>

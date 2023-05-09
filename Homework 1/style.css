@@ -1,0 +1,198 @@
+/* ბრაუზერიდან დავაიმპორტეთ font-family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* ყველა ელემენტს მოვაშორეთ margin და padding */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* overflow-თი სქროლები მოვაშორეთ საიტს,
+height-ით სიმაღლე გავზარდეთ მთლიან ხედვის არეალზე,
+background-ით შევცვალეთ უკანა ფონის ფერი,
+font-family-ით შევცვალეთ ტექსტის სტილი.
+*/
+body{
+    overflow: hidden;
+    height: 100vh;
+    background: #dddbcb;
+    font-family: 'Poppins', sans-serif;
+}
+/* 
+top-ით nav სექცია მივიყვანეთ სულ ზემოთ,
+width- სოგანე მივუთითეთ მთელი ხედვის არეალი,
+სიმაღლე - 60px,
+background-color-ით შევუცვალეთ ფერი,
+color-ით შევცვალეთ ტექსტის ფერი,
+display:flex ის მინიჭების შემდეგ გამოვიყენეთ justify-content, align-items ჰორიზონტალურად და ვერტიკალურად გასაცენტრად.
+*/
+nav{
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 
+მარცხნივ სხვა ელემენტებისგან დაშორება გავზარდეთ 10px-მდე,
+ტექსტის ზომა გავზარდეთ 40px-მდე,
+display: inline-block;-ით საშუალება მივეცით დაეკავებინა იმდენი ადგილი რამდენიც სჭირდებოდა კონტენტ,
+ასოებს შორის სივრცე გავზარდეთ 10px-მდე
+*/
+.nav-header{
+    margin-left: 50px;
+    font-size: 40px;
+    display: inline-block;
+    letter-spacing: 10px;
+}
+/* 
+justify-content: space-around;-ით ელემენტებს შორის დაშორება იქნება თანაბარი,
+სიგანე იქნება მშობელი ელემენტის სიგანის 50%,
+სხვა ელემენტებთან დაშორება იქნება 20px
+*/
+.nav-ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin-right: 20px;
+}
+/* 
+ტექსტის სისქე გავზარდეთ 600 მდე,
+display: inline-block;-ით საშუალება მივეცით დაეკავებინა იმდენი ადგილი რამდენიც სჭირდებოდა კონტენტ,
+ლისტს მოვაშორეთ შავი წრეები.
+*/
+.nav li{
+    font-weight: 600;
+    display: inline-block;
+    list-style-type: none;
+}
+/* 
+ლინკს მოვაშორეთ ქვედა ხაზი
+*/
+a{
+    text-decoration: none;
+}
+/* 
+ტექსტის ფერი დავაყენეთ თეთრი, 
+ელემენტები გავცენტრეთ,
+ლინკს მოვაშორეთ ქვედა ხაზი,
+ცვლილების დრო მივუთითეთ 0.3 წამი,
+კონტენტსა და საზღვარს შორის მანძილი გავზარდეთ: ზემოთ და ქვემოთ 5px, გვერდებზე 20px,
+კუთხეები მოვამრგვალეთ 5px-ით.
+*/
+.nav{
+    color: white;
+    display: flex;
+    justify-content:center ;
+    text-decoration: none;
+    transition: .3s;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+/* 
+როცა მაუსს მივიტანთ იზრდება ზომაში და ეცვლება background ფერი
+*/
+.nav:hover{
+    transform: scale(1.1);
+    background: #005f5f;
+    
+}
+/* 
+ის ლინკი, რომელზეც გადანასვლელები ვართ იქნება თეთრი ფერის
+*/
+a:visited{
+    color: white;
+}
+/* 
+სიმაღლე იქენბა 360px,
+კონტენტსა და საზრვარს შორის დაშორება 50px
+*/
+article{
+    height: 360px;
+    padding: 50px;
+}
+/* 
+შევცვალეთ background ფერი,
+გავათეთრეთ ტექსტი,
+გავზარდეთ ზომაში, 
+position: relative;-ით საშუალება გვაქვს ვამოძრაოთ და დავაყენოთ სასურველ ადგილას,
+height: 80%;-ით  სიმაღლე გავზარდეთ მშობელი ელემენტის სიმაღლის 80%-მდე
+*/
+.langs{
+    display: inline-block;
+    background: #005f5f;
+    color: white;
+    transform: scale(1.5);
+    position: relative;
+    top: 70px;
+    left: 50px;
+    padding: 30px;
+    border-radius: 10px;
+    height: 80%;
+}
+
+.lang-ul li{
+    position: relative;
+    left: 20px;
+    margin: 25px 0;
+}
+.langs-header{
+    margin-bottom: 20px;
+}
+/* 
+flex-direction: column;-ით ელემენტები დავაწყვეთ სვეტისებურად, ზემოდან ქვემოთ.
+*/
+aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 130px;
+}
+/* 
+ტექსტის ზომა 25px,
+სხვა ელემენტებთან დაშორება ქვემოდან 30px
+*/
+aside h1{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+/* 
+სიგანე 200px,
+სიმაღლე 40px,
+შევცვალეთ background ფერი,
+ტექსტის ფერი დავაყენეთ თეთრი,
+მოვაშორეთ border,
+კუთხეები მოვამრგვალეთ 5px-ით,
+ტექსტის სისქე გავზარდეთ 600- მდე,
+მთლიანი კონტენტი გავზარდეთ ზომაში 1.1-ჯერ,
+ცვლილების დრო 0.3 წამი
+
+*/
+aside button{
+    width: 200px;
+    height: 40px;
+    background:#005f5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transform: scale(1.1);
+    transition: .3s;
+}
+/* 
+როცა ღილაკთან მივიტანთ მაუსს გაიზრდება ზიმაში 1.2-ჯერ,
+გაუჩნდება ჩრდილი 1px-ით მარცხნივ, 7px-ით დაბლა და blur დაედება 10px,
+rgb(0, 0, 0, .2)-ით გავამკრთალეთ შავი ფერი
+*/
+aside button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    box-shadow: 1px 7px 10px rgb(0, 0, 0, .2);
+}
+.aside-header{
+    color: rgb(62, 77, 77);
+}
